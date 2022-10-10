@@ -11,13 +11,13 @@ const Question = ({ qstn }) => {
         if (option === correctAnswer) {
             correctToast();
         } else {
-            alert('false')
+            falseToast();
         }
     }
 
-    const correctToast = () => toast.success('🦄 Wow so easy!', {
+    const correctToast = () => toast.success('🦄 Wow!!! Your answer is correct', {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -26,6 +26,19 @@ const Question = ({ qstn }) => {
         theme: "colored",
     });
 
+    const falseToast = () => toast.error('🦄 oppss! wrong answer', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
+
+
+
     return (
         <div>
             {question}
@@ -33,6 +46,19 @@ const Question = ({ qstn }) => {
             {
                 options.map(option => <Options option={option} handleCorrectAnswer={handleCorrectAnswer} key={option}></Options>)
             }
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+            />
+
             <ToastContainer
                 position="top-center"
                 autoClose={5000}
