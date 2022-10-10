@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import './header.css';
 
 const Header = () => {
     return (
@@ -12,14 +13,15 @@ const Header = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                                <Link className="nav-link active fs-4" aria-current="page" to="/">Home</Link>
+                           
+                            <li className="nav-item me-2">
+                                <NavLink className="nav-link fs-4 {({ isActive }) => isActive ? 'active' : undefined}" to="/home">home</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link fs-4" to="/blog">blog</Link>
+                            <li className="nav-item me-2">
+                                <NavLink className="nav-link fs-4 {({ isActive }) => isActive ? 'active' : undefined}" to="/blog">blog</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link fs-4" to="/static">static</Link>
+                            <li className="nav-item me-2">
+                                <NavLink className="nav-link fs-4 {({ isActive }) => isActive ? 'active' : undefined}" to="/static">static</NavLink>
                             </li>
                         </ul>
                     </div>

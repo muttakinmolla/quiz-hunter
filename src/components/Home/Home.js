@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Courses from '../Courses/Courses';
 import './Home.css';
 
-export const AnswerContext = createContext('nothing');
+export const QuestionAnswerContext = createContext('nothing');
 
 const Home = () => {
     const allCourse = useLoaderData();
@@ -11,7 +11,7 @@ const Home = () => {
 
     const [answer, setAnswer] = useState(1);
     return (
-        <AnswerContext.Provider value={[answer, setAnswer]}>
+        <QuestionAnswerContext.Provider value={[answer, setAnswer]}>
             <div>
                 <div className='main-header'>
                     <div className='header'>
@@ -24,7 +24,7 @@ const Home = () => {
                     }
                 </div>
             </div>
-        </AnswerContext.Provider>
+        </QuestionAnswerContext.Provider>
 
     );
 };
