@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Options from '../Options/Options';
 
 const Question = ({ qstn }) => {
-    console.log(qstn);
     const { options, question, correctAnswer } = qstn;
-    
+    const [answer, setAnswer] = useState(correctAnswer);
+
+    const handleCorrectAnswer = (option) => {
+        if (option === answer) {
+            alert('ok')
+        } else {
+            alert('false')
+        }
+    }
+
     return (
         <div>
-            <p>{question}</p>
+            {question}
+
             {
-                options.map(option => <li>{option}</li>)
+                options.map(option => <Options option={option} handleCorrectAnswer={handleCorrectAnswer} key={option}></Options>)
             }
         </div>
     );
