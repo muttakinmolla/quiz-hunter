@@ -6,7 +6,6 @@ import './header.css';
 const Home = () => {
     const allCourse = useLoaderData();
     const courses = allCourse.data;
-    console.log(courses)
     return (
         <div>
             <div className='main-header'>
