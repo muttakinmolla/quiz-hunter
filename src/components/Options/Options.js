@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Options = ({ option, handleCorrectAnswer }) => {
+
+
     return (
         <div>
             <div className="form-check">

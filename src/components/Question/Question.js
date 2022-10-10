@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
+import { AnswerContext } from '../Home/Home';
 import Options from '../Options/Options';
-import 'react-toastify/dist/ReactToastify.css';
 
 const Question = ({ qstn }) => {
     const { options, question, correctAnswer } = qstn;
-    // const [answer, setAnswer] = useState(correctAnswer);
+    const [answer, setAnswer] = useContext(AnswerContext);
+    console.log(answer)
 
     const handleCorrectAnswer = (option) => {
         if (option === correctAnswer) {
+            // console.log(newAnswer)
             correctToast();
+            setAnswer(() => answer + 1)
         } else {
             falseToast();
         }
+
     }
+
+
 
     const correctToast = () => toast.success('🦄 Wow!!! Your answer is correct', {
         position: "top-center",
@@ -37,15 +43,14 @@ const Question = ({ qstn }) => {
         theme: "colored",
     });
 
-
-
     return (
-        <div>
-            {question}
+        <div className='p-3 border rounded mb-3'>
+            <p>{question}</p>
 
             {
                 options.map(option => <Options option={option} handleCorrectAnswer={handleCorrectAnswer} key={option}></Options>)
             }
+
             <ToastContainer
                 position="top-center"
                 autoClose={5000}
@@ -71,6 +76,7 @@ const Question = ({ qstn }) => {
                 pauseOnHover
                 theme="colored"
             />
+
         </div>
     );
 };

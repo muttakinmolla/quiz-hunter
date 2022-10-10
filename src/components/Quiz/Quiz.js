@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import Question from '../Question/Question';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Quiz = () => {
     const course = useLoaderData();
     const { name, logo, questions } = course.data;
-    console.log(questions);
+    console.log(questions.correctAnswer);
+
     return (
         <div>
             <div className="row">
@@ -20,12 +24,21 @@ const Quiz = () => {
                 </div>
                 <div className="col-lg-6">
                     {
-                        questions.map(qstn => <Question qstn={qstn} key={qstn.id}></Question>)
+                        questions.map(qstn => <Question
+                            qstn={qstn}
+                            key={qstn.id}
+                        ></Question>)
                     }
                 </div>
                 <div className="col-lg-3">
-                    this is cart
+                    <div className='result border bg-info text-white rounded px-3 py-3'>
+                        <h1 className='text-center'>RESULT</h1>
+                        <p>Total Question :</p>
+                        <p>Correct Answer :</p>
+                        <p>Incorrect Answer :</p>
+                    </div>
                 </div>
+                
             </div>
         </div>
     );
