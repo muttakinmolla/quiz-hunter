@@ -1,11 +1,13 @@
-.main-header{
-    height: 100%;
+.main-header {
+    height: 50vh;
 }
+
 .header {
     background-image: url('../../../public/images/quiz-bg.jpg');
+    background: linear-gradient(0deg, rgba(248, 249, 249, 0.976), rgba(251, 249, 250, 0.3)), url('../../../public/images/quiz-bg.jpg');
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: scroll;
+
 }
