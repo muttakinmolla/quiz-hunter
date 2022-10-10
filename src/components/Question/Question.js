@@ -1,11 +1,15 @@
 import React from 'react';
 
-const Question = ({ question }) => {
-    console.log(question);
-    // const {options, question, correctAnswer} = question.data;
+const Question = ({ qstn }) => {
+    console.log(qstn);
+    const { options, question, correctAnswer } = qstn;
+    
     return (
         <div>
-
+            <p>{question}</p>
+            {
+                options.map(option => <li>{option}</li>)
+            }
         </div>
     );
 };
