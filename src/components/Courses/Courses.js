@@ -10,7 +10,7 @@ const Courses = ({ course }) => {
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <Link href="#" className="btn btn-primary">Start Quiz</Link>
+                    <Link href="#" className="btn btn-primary">Start Quiz </Link>
                 </div>
             </div>
         </div>
