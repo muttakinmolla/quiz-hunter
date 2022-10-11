@@ -20,12 +20,12 @@ const Quiz = () => {
         <AnswerContext.Provider value={[answer, setAnswer]}>
             <falseAnswerContext.Provider value={[falseAnswer, setFalseAnswer]}>
                 <div>
-                    <div className="row">
+                    <div className="row ">
                         <div className="col-lg-3">
                             <div className='border rounded'>
                                 <img src={logo} className="card-img-top img-fluid" alt="..." />
                                 <div className="card-body d-flex justify-content-between align-items-center">
-                                    <h5 className="card-title">{name}</h5>
+                                    <h5 className="card-title text-center">{name}</h5>
 
                                 </div>
                             </div>
@@ -44,6 +44,7 @@ const Quiz = () => {
                                 <p>Total Question : {total}</p>
                                 <p>Correct Answer : {answer}</p>
                                 <p>In Correct Answer : {falseAnswer}</p>
+                                <p>Your Score : {answer}/{total}</p>
 
                             </div>
                         </div>
