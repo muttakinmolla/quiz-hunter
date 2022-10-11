@@ -1,24 +1,27 @@
 import React, { useContext } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
-import { AnswerContext, QuestionAnswerContext } from '../Home/Home';
 import Options from '../Options/Options';
+import { AnswerContext, falseAnswerContext } from '../Quiz/Quiz';
+
 
 const Question = ({ qstn }) => {
     const { options, question, correctAnswer } = qstn;
-    const [ans, setAns] = useContext(QuestionAnswerContext);
+    // console.log(qstn)
+
+    const [answer, setAnswer] = useContext(AnswerContext);
+    const [falseAnswer, setFalseAnswer] = useContext(falseAnswerContext);
 
     const handleCorrectAnswer = (option) => {
         if (option === correctAnswer) {
-            // console.log(newAnswer)
             correctToast();
-            setAns(() => ans + 1)
+            setAnswer(answer + 1)
+
         } else {
             falseToast();
+            setFalseAnswer(falseAnswer + 1)
         }
 
     }
-
-
 
     const correctToast = () => toast.success('🦄 Wow!!! Your answer is correct', {
         position: "top-center",

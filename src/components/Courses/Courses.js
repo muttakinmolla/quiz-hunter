@@ -3,6 +3,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Courses = ({ course }) => {
     const { id, name, logo, total } = course;
     return (

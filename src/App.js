@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layout/Main';
@@ -7,6 +6,7 @@ import Quiz from './components/Quiz/Quiz';
 import Blog from './components/Blog/Blog';
 import Static from './components/Static/Static';
 import Error from './components/Error/Error';
+
 
 function App() {
   const router = createBrowserRouter([
