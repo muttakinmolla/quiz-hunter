@@ -71,11 +71,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # b6-quiz-crackerz-muttakinmolla
 
-<!--
+<!--Developer and this site info -------------------------------------------------------------
 
 Design and Develop : Md. muttakin molla,
 
 github link : muttakinmolla
+
+developer mail : muttakinmmolla@gmail.com
 
 hosting link : https://sparkly-platypus-9480fc.netlify.app/
 
