@@ -25,9 +25,11 @@ const Quiz = () => {
                             <div className="row">
                                 <div className="col-lg-3">
                                     <div className='border rounded'>
-                                        <img src={logo} className="card-img-top img-fluid" alt="..." />
+                                        <div className="bg-secondary">
+                                            <img src={logo} className="card-img-top img-fluid" alt="..." />
+                                        </div>
                                         <div className="card-body d-flex justify-content-between align-items-center">
-                                            <h5 className="card-title m-auto">{name}</h5>
+                                            <h5 className="card-title m-auto p-2">{name}</h5>
 
                                         </div>
                                     </div>
