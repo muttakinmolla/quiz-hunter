@@ -5,7 +5,6 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 const Static = () => {
     const course = useLoaderData();
     const courses = course.data;
-    console.log(courses)
 
     let chartData = []
     courses.map(course => {

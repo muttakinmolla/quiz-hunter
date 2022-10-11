@@ -12,7 +12,6 @@ const Question = ({ qstn }) => {
 
     let newQuestion = question.split("<p>").pop();
     let finalQuestion = newQuestion.split("</p>").shift();
-    console.log(finalQuestion);
 
     const [answer, setAnswer] = useContext(AnswerContext);
     const [falseAnswer, setFalseAnswer] = useContext(falseAnswerContext);
