@@ -74,6 +74,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 <!--
 
 Design and Develop : Md. muttakin molla,
+
 github link : muttakinmolla
-hosting link :
+
+hosting link : https://sparkly-platypus-9480fc.netlify.app/
+
+
+I have called two api here. one api call from home page and root page where I show course data. Then I called another dynamic api which is called quiz route and show every course quiz. In the Blog page I have write some simple question and answer. Static page I have called main api which I have already called home and root page. static page shows a rechart data. the data I have got form this main api
  -->
