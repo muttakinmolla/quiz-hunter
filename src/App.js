@@ -41,6 +41,9 @@ function App() {
         },
         {
           path: 'static',
+          loader: () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
           element: <Static></Static>
         }
       ]

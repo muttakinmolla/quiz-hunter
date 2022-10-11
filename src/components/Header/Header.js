@@ -15,13 +15,13 @@ const Header = () => {
                         <ul className="navbar-nav ms-auto">
                            
                             <li className="nav-item me-2">
-                                <NavLink className="nav-link fs-4 {({ isActive }) => isActive ? 'active' : undefined}" to="/home">home</NavLink>
+                                <NavLink className="nav-link fs-4" to="/home">home</NavLink>
                             </li>
                             <li className="nav-item me-2">
-                                <NavLink className="nav-link fs-4 {({ isActive }) => isActive ? 'active' : undefined}" to="/blog">blog</NavLink>
+                                <NavLink className="nav-link fs-4" to="/blog">blog</NavLink>
                             </li>
                             <li className="nav-item me-2">
-                                <NavLink className="nav-link fs-4 {({ isActive }) => isActive ? 'active' : undefined}" to="/static">static</NavLink>
+                                <NavLink className="nav-link fs-4" to="/static">static</NavLink>
                             </li>
                         </ul>
                     </div>
